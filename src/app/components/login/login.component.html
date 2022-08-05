@@ -1,0 +1,14 @@
+<section id="authentication">
+    <h1>Login GitHub</h1>
+    <form class="form" #form="ngForm" (ngSubmit)="login(form.value)">
+        <div>
+            <label for="username">Username:
+                <input id="username" type="text" name="username" placeholder="Add your username" required
+                    [(ngModel)]="model.username">
+            </label>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+
+</section>
