@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.login({ username: 'santDani' })
+    this.login({ username: 'santDani' })// TODO.. remove
   }
 
   public login(form: { username: string }): void {
