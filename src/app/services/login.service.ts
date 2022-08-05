@@ -11,10 +11,8 @@ export class LoginService {
 
   private API_ROOT: string = 'https://api.github.com/users/';
 
-  private repositories: Repository[];
 
   constructor(private httpClient: HttpClient) {
-    this.repositories = [];
   }
 
   public getRepositories(username: string): Observable<any[]> {

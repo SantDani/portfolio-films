@@ -1,1 +1,3 @@
-<p>home works!</p>
+<br><br><br>
+<app-login (onShowRepos)="getRepos($event)"></app-login>
+<app-repos-table *ngIf="showTable" [dataSource]="this.repositories ? this.repositories : []"></app-repos-table>
