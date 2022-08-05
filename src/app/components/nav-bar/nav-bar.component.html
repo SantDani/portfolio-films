@@ -2,6 +2,11 @@
     <div class="top-nav">
         <a class="active" routerLinkActive="active" routerLink="/home">Home</a>
         <a>Contact</a>
-        <input type="text" placeholder="Search username">
+        <form class="form-search" #form="ngForm" (ngSubmit)="this.onSubmit(form.value)">
+            <label for="username">
+                <input id="username" name="username" type="text" placeholder="Search username" required
+                    [(ngModel)]="model.username">
+            </label>
+        </form>
     </div>
 </div>

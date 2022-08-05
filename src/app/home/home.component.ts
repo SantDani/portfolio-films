@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
       // The suffix $ is used to indicate that variable is an Observable
       const result$ = this.loginService.getRepositories(username);
       this.repositories = await lastValueFrom(result$);
-      console.log("🚀 ~ file: app.component.ts ~ line 26 ~ AppComponent ~ getRepos ~ this.repositories", this.repositories[0])
     } catch (error) {
       console.error(error)
     }

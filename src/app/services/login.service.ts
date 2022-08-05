@@ -16,7 +16,6 @@ export class LoginService {
   }
 
   public getRepositories(username: string): Observable<any[]> {
-    // return this.http.get(`${this.API_ROOT}${username}/repos`).toPromise();
     // return await this.http.get(`${this.API_ROOT}${username}/repos`).toPromise();
     return this.httpClient.get<Repository[]>(`${this.API_ROOT}${username}/repos`).pipe(
       map(response => response)

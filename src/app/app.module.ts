@@ -1,5 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { RoutingModule } from './routing/routing.module';
     RoutingModule,
     HttpClientModule,
     NoopAnimationsModule,
+    FormsModule
 
 
   ],
