@@ -31,14 +31,16 @@ export class ReposTableComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.onObserverSearchRepositories = this.gitHubService.message.subscribe(async username => {
-      // console.log("🚀 ~ file: repos-table.component.ts result", result)
-      //TODO.. call API
 
-      await this.getRepos(username);
+      try {
+        await this.getRepos(username);
+      } catch (error) {
+        console.log(error)
+      }
     })
   }
 
-  public async getRepos(username: string) {
+  public async getRepos(username: string): Promise<void> {
     this.showTable = false;
     try {
       const result$ = this.gitHubService.getRepositories(username);

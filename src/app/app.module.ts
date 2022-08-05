@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RoutingModule } from './routing/routing.module';
+import { RepositoryDetailsComponent } from './components/repository-details/repository-details.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    RepositoryDetailsComponent
   ],
   imports: [
     BrowserModule,
